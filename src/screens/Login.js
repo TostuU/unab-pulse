@@ -6,7 +6,7 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../config/firebase';
 import { LoginBackground } from '../components/common/Backgrounds';
 
-export default Login = ({ navigation }) => {
+const Login = ({ navigation }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -18,18 +18,24 @@ export default Login = ({ navigation }) => {
     }
   };
 
+  const onForgotPassword = () => {
+    navigation.navigate('ForgotPassword');
+  };
+
   return (
-    <View classname='flex bg-white'>
+    <View style={{ flex: 1, backgroundColor: 'white' }}>
       <LoginBackground />
       <LoginForm
         email={email}
         password={password}
         setEmail={setEmail}
         setPassword={setPassword}
-        onSubmitFunction={() => onHandleLogin()}
-        onForgotPassword={() => console.log('forgot password')}
+        onSubmitFunction={onHandleLogin}
+        onForgotPassword={onForgotPassword}
         onRegister={() => navigation.navigate('Signup')}
       />
     </View>
   );
 };
+
+export default Login;

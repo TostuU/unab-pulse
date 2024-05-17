@@ -6,7 +6,7 @@ export const BackgroundComponent = (props) => {
   const StyledBackground = styled(Image);
 
   return (
-    <View classname='flex bg-white'>
+    <View className='flex bg-white'>
       <StyledBackground
         source={props.backgroundImage}
         className='w-full h-[840] object-cover absolute top-0'
@@ -20,7 +20,9 @@ export const LoginBackground = () => (
 );
 
 export const SignBackground = () => (
-  <BackgroundComponent
-    backgroundImage={require('../../../assets/singup.png')}
-  />
+  <BackgroundComponent backgroundImage={require('../../../assets/singup.png')} />
+);
+
+export const ForgotBackground = () => (
+  <BackgroundComponent backgroundImage={require('../../../assets/forgotpassword.png')} />
 );

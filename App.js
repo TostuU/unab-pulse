@@ -15,6 +15,7 @@ import { auth } from './config/firebase';
 import Home from './src/screens/Home';
 import Login from './src/screens/Login';
 import Signup from './src/screens/Signup';
+import ForgotPassword from './src/screens/ForgotPassword';
 
 const Stack = createStackNavigator();
 const AuthenticatedUserContext = createContext({});
@@ -55,6 +56,13 @@ AuthStack = () => {
       <Stack.Screen
         name='Signup'
         component={Signup}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name='ForgotPassword'
+        component={ForgotPassword}
         options={{
           headerShown: false,
         }}
