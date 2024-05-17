@@ -11,7 +11,7 @@ const ForgotPassword = () => {
 
   return (
     <View style={{ flex: 1, backgroundColor: 'white' }}>
-      <ForgotBackground />
+      <LoginBackground />
       <View style={styles.content}>
         <Text style={styles.title}>Olvidé mi contraseña</Text>
         <Text style={styles.label}>Email de recuperación</Text>
